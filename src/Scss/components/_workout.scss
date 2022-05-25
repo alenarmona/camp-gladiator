@@ -1,0 +1,17 @@
+.workout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .img-container {
+        flex: 1 1 300px;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+        }
+    }
+}
