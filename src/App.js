@@ -1,24 +1,38 @@
-import logo from './Assets/Images/cg_logomark.png';
+import React from 'react';
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Routes,
+  Outlet
+} from 'react-router-dom';
+import Home from './Pages/Home';
+import Workouts from './Pages/Workouts';
+import Workout from './Pages/Workout';
+import NotFound from './Pages/NotFound';
 import './Scss/App.scss';
-import Workout from './Components/Workout';
-import Workouts from './workouts.json';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Workouts</h1>
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <header>
+        <Link to="/">Home</Link>
+        {' '}
+        <Link to="/workouts">Workouts</Link>
+        {' '}
+        <Outlet />
       </header>
-      <section className="workouts">
-        {
-          Workouts && Workouts.map( workout => {
-            return <Workout data={workout} />
-          })
-        }
-      </section>
+      <main>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/workouts" element={<Workouts />}>
+            <Route path=":id" element={<Workout />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
     </div>
-  );
-}
+  </BrowserRouter>
+);
 
 export default App;
