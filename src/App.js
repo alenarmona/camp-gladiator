@@ -10,6 +10,7 @@ import Workout from './Pages/Workout';
 import NotFound from './Pages/NotFound';
 import './Scss/App.scss';
 
+
 const App = () => (
   <Routes>
     <Route path="/" element={<Layout />}>

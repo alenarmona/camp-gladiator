@@ -1,11 +1,11 @@
 .workout {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     padding: 30px;
 
     &.reverse {
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
 
     .img-container {
@@ -24,35 +24,5 @@
 
     .data-container {
         padding: 30px;
-
-        ul.workout-meta {
-            display: flex;
-            margin: 20px 0px;
-            max-width: 300px;
-            li {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-transform: capitalize;
-                font-weight: bold;
-                border-right: 1px solid lighten($grey, 30%);
-                padding: 0px 20px;
-
-                img {
-                    height: 30px;
-                    width: auto;
-                    margin-bottom: 10px;
-                }
-                &:last-child {
-                    border-right: 0;
-                }
-                &:first-child {
-                    padding-left: 0;
-                }
-
-            }
-
-        }
     }
 }

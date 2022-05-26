@@ -1,15 +1,34 @@
 import React from 'react';
 import WorkoutsData from '../workouts.json';
-import Hero from '../Components/Hero';
-import backgroundImage from '../Assets/Images/Hero-Workouts.jpg';
 import { useParams } from "react-router-dom";
-import { render } from '@testing-library/react';
+import WorkoutMeta from '../Components/WorkoutMeta';
+import ScrollToTop from '../Components/ScrollToTop';
 
+function getWorkoutDetails(id) {
+    let workout = WorkoutsData.filter( (workout) => workout.id === id);
+    return workout && workout[0];
+}
 export default function Workout() {
     let { id } = useParams();
+    let workout = getWorkoutDetails(id);
+    console.log(workout);
     return (
+
         <div className="page-workout">
-            <h2>Workout: {id}</h2>
+            <ScrollToTop />
+            <div className="main-content">
+                <div className="left-content">
+                    <h2>{workout.title}</h2>
+                    <p>{workout.description}</p>
+                    <WorkoutMeta data={workout} />
+                </div>
+                <div className="right-content">
+                    <img src={workout.thumbnail} alt={workout.title} />
+
+                </div>
+            </div>
+
+            <video src={workout.media} width="100%" controls />
         </div>
     );
 }

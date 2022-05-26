@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-import levelIcon from '../Assets/Images/icons/level.svg';
-import durationIcon from '../Assets/Images/icons/duration.svg';
-import impactIcon from '../Assets/Images/icons/impact.svg';
+import WorkoutMeta from './WorkoutMeta';
 
 export default class Workout extends Component {
     constructor(props) {
@@ -34,11 +32,7 @@ export default class Workout extends Component {
                 </div>
                 <div className="data-container">
                     <h2>{this.state.loading ? <Skeleton /> : workout.title }</h2>
-                    <ul className="workout-meta">
-                        <li><img src={levelIcon} alt="level" /><span>{this.state.loading ? <Skeleton /> : workout.levelTag }</span></li>
-                        <li><img src={impactIcon} alt="level" /><span>{this.state.loading ? <Skeleton /> : workout.impactTag }</span></li>
-                        <li><img src={durationIcon} alt="level" /><span>{this.state.loading ? <Skeleton /> : workout.duration + '\'' }</span></li>
-                    </ul>
+                    <WorkoutMeta data={workout} />
                     <p>{ this.state.loading ? <Skeleton /> : workout.description }</p>
                     <Link
                         to={`/workouts/${workout.id}`}
