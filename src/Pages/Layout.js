@@ -3,7 +3,8 @@ import logo from '../Assets/Images/cg_logomark.png';
 import logoFooter from '../Assets/Images/logo-white.png';
 import {
     Link,
-    Outlet
+    Outlet,
+    NavLink
   } from 'react-router-dom';
 
 const Layout = () => (
@@ -15,10 +16,10 @@ const Layout = () => (
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Workouts</Link>
+                    <NavLink className={(navData) => navData.isActive ? "active" : "" } to="/">Workouts</NavLink>
                 </li>
                 <li>
-                    <Link to="/about-me">About me</Link>
+                    <NavLink className={(navData) => navData.isActive ? "active" : "" } to="/about-me">About me</NavLink>
                 </li>
             </ul>
         </nav>

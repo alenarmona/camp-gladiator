@@ -30,6 +30,57 @@ header {
                     line-height: 28px;
                     letter-spacing: .04em;
                     text-transform: uppercase;
+                    position: relative;
+                    transition: 200ms ease all;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $red;
+                        position: absolute;
+                        bottom: -48px;
+                        right: 0;
+                        opacity: 0;
+                        transition: all 0.3s;
+                    }
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 0%;
+                        height: 3px;
+                        background-color: $red;
+                        position: absolute;
+                        bottom: -48px;
+                        left: 0;
+                        opacity: 0;
+                        transition: all 0.3s;
+                    }
+
+                    &:hover{
+                        &:before {
+                            -moz-animation: btn_border_animate 0.4s 0s normal forwards;
+                            -webkit-animation: btn_border_animate 0.4s 0s normal forwards;
+                            animation: btn_border_animate 0.4s 0s normal forwards;
+                            opacity: 1;
+                            transition: all 0.3s;
+                        }
+                        &:after {
+                            -moz-animation: btn_border_animate_two 0.4s 0.4s normal forwards;
+                            -webkit-animation: btn_border_animate_two 0.4s 0.4s normal forwards;
+                            animation: btn_border_animate_two 0.4s 0.4s normal forwards;
+                            opacity: 1;
+                            transition: all 0.3s;
+                        }
+                    }
+
+                    &.active {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
 
                     @include respond-to('xxsmall') {
                         font-size: 24px;
