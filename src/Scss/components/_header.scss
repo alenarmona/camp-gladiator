@@ -1,0 +1,30 @@
+header {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    box-shadow: 0 3px 0 0 rgb(51 49 50 / 20%);
+    background-color: $white;
+    font-family: $secondary-font;
+    padding: 15px 45px;
+
+    nav {
+        display: flex;
+        align-items: center;
+        ul {
+            list-style: none;
+            display: flex;
+            li {
+                margin-right: 20px;
+                a {
+                    color: $black;
+                    text-decoration: none;
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    letter-spacing: .04em;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

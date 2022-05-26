@@ -1,11 +1,9 @@
 import React from 'react';
 import {
-  BrowserRouter,
   Route,
-  Link,
-  Routes,
-  Outlet
+  Routes
 } from 'react-router-dom';
+import Layout from './Pages/Layout';
 import Home from './Pages/Home';
 import Workouts from './Pages/Workouts';
 import Workout from './Pages/Workout';
@@ -13,26 +11,14 @@ import NotFound from './Pages/NotFound';
 import './Scss/App.scss';
 
 const App = () => (
-  <BrowserRouter>
-    <div>
-      <header>
-        <Link to="/">Home</Link>
-        {' '}
-        <Link to="/workouts">Workouts</Link>
-        {' '}
-        <Outlet />
-      </header>
-      <main>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/workouts" element={<Workouts />}>
-            <Route path=":id" element={<Workout />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-    </div>
-  </BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="/workouts" element={<Workouts />} />
+      <Route path="/workouts/:id" element={<Workout />} />
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  </Routes>
 );
 
 export default App;
