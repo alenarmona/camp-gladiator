@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256"
+	height="256" viewBox="0 0 256 256" xml:space="preserve">
+	<desc>Created with Fabric.js 1.7.22</desc>
+	<defs>
+	</defs>
+	<g transform="translate(128 128) scale(0.72 0.72)" style="">
+		<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+			transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
+			<path
+				d="M 45 76.979 c -0.336 0 -0.671 -0.084 -0.974 -0.253 c -7.521 -4.194 -19.236 -14.056 -24.107 -20.29 c -3.428 -4.389 -6.088 -9.274 -7.69 -14.128 c -0.813 -2.464 -1.351 -4.9 -1.596 -7.239 c -0.666 -6.339 0.792 -11.735 4.216 -15.603 c 3.506 -3.961 8.43 -6.246 13.864 -6.434 c 5.731 -0.2 11.447 1.983 16.288 6.173 c 4.841 -4.19 10.572 -6.368 16.289 -6.173 c 5.434 0.188 10.356 2.473 13.862 6.434 H 75.15 c 7.33 8.28 5.198 23.829 -5.069 36.971 c -4.871 6.234 -16.587 16.095 -24.107 20.29 C 45.671 76.896 45.336 76.979 45 76.979 z M 29.427 17.02 c -0.192 0 -0.384 0.003 -0.577 0.01 c -4.327 0.15 -8.235 1.957 -11.007 5.087 c -2.661 3.005 -3.778 7.34 -3.233 12.534 c 0.215 2.056 0.691 4.21 1.416 6.403 c 1.46 4.422 3.896 8.89 7.044 12.919 C 27.398 59.513 37.939 68.462 45 72.67 c 7.061 -4.208 17.602 -13.157 21.929 -18.696 c 8.935 -11.435 11.182 -25.13 5.228 -31.856 c -0.001 0 -0.001 0 -0.001 0 c -2.771 -3.131 -6.679 -4.938 -11.005 -5.087 c -5.182 -0.163 -10.42 2.066 -14.748 6.322 c -0.778 0.765 -2.027 0.765 -2.805 0 C 39.431 19.254 34.42 17.02 29.427 17.02 z"
+				style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #c8102e; fill-rule: nonzero; opacity: 1;"
+				transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+			<path
+				d="M 48.896 53.151 c -0.101 0 -0.201 -0.008 -0.302 -0.023 c -0.646 -0.099 -1.204 -0.507 -1.493 -1.094 l -7.949 -16.159 l -5.82 7.076 c -0.38 0.462 -0.946 0.729 -1.544 0.729 H 2 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 h 28.842 l 7.19 -8.741 c 0.432 -0.525 1.106 -0.793 1.775 -0.716 c 0.675 0.079 1.264 0.494 1.564 1.104 l 8.052 16.367 l 7.034 -7.392 c 0.378 -0.397 0.901 -0.622 1.449 -0.622 H 88 c 1.104 0 2 0.896 2 2 s -0.896 2 -2 2 H 58.765 l -8.42 8.85 C 49.964 52.93 49.438 53.151 48.896 53.151 z"
+				style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #c8102e; fill-rule: nonzero; opacity: 1;"
+				transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+		</g>
+	</g>
+</svg>

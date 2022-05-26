@@ -7,27 +7,18 @@ footer {
     padding: 35px 65px;
     background-color: $black;
 
-    .social {
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 30px;
-        justify-content: start;
-        margin: 0;
-        padding: 0;
+    .footer-nav {
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            li {
 
-        li::before {
-          display: none;
-        }
+                a {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
 
-        .icon {
-          width: 30px;
-          height: 30px;
-          fill: map(colors, white, base);
-          transition: all 0.3s ease-in;
         }
-
-        a:focus .icon, a:hover .icon {
-          fill: map(colors, red, base);
-        }
-      }
+    }
 }
