@@ -11,7 +11,7 @@ function getWorkoutDetails(id) {
 export default function Workout() {
     let { id } = useParams();
     let workout = getWorkoutDetails(id);
-    console.log(workout);
+
     return (
 
         <div className="page-workout">
@@ -24,11 +24,12 @@ export default function Workout() {
                 </div>
                 <div className="right-content">
                     <img src={workout.thumbnail} alt={workout.title} />
-
                 </div>
             </div>
 
-            <video src={workout.media} width="100%" controls />
+            <video src={workout.media} width="100%" controls >
+                <source src={workout.media} />
+            </video>
         </div>
     );
 }
