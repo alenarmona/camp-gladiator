@@ -13,15 +13,27 @@ h1, h2, h3 {
 h1 {
     color: $red;
     font-size: 84px;
+
+    @include respond-to('xxsmall') {
+        font-size: 64px;
+    }
 }
 
 h2 {
     font-size: 54px;
+
+    @include respond-to('xxsmall') {
+        font-size: 44px;
+    }
 }
 
 p {
     font-size: 20px;
     color: $grey;
+
+    @include respond-to('xxsmall') {
+        font-size: 18px;
+    }
 }
 
 ul {

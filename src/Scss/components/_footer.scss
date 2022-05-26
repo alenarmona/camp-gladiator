@@ -1,24 +1,11 @@
 footer {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 30px;
-    grid-template-columns: 130px 1fr 210px;
+    display: flex;
     align-items: center;
-    padding: 35px 65px;
+    justify-content: center;
+    padding: 35px;
     background-color: $black;
 
-    .footer-nav {
-        ul {
-            display: flex;
-            justify-content: space-evenly;
-            li {
-
-                a {
-                    color: $white;
-                    text-decoration: none;
-                }
-            }
-
-        }
+    img {
+        max-width: 200px;
     }
 }

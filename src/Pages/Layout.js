@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../Assets/Images/cg_logomark.png';
+import logoFooter from '../Assets/Images/logo-white.png';
 import {
     Link,
     Outlet
@@ -8,14 +9,13 @@ import {
 const Layout = () => (
     <div>
         <header>
-        <img src={logo} alt="Logo" />
+        <Link to="/">
+            <img src={logo} alt="Logo" />
+        </Link>
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/workouts">Workouts</Link>
+                    <Link to="/">Workouts</Link>
                 </li>
                 <li>
                     <Link to="/about-me">About me</Link>
@@ -25,43 +25,7 @@ const Layout = () => (
         </header>
         <Outlet />
         <footer>
-            <img src={logo} alt="Logo" />
-            <div className="footer-nav">
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/workouts">Workouts</Link>
-                    </li>
-                    <li>
-                        <Link to="/about-me">About me</Link>
-                    </li>
-                </ul>
-            </div>
-            <div className="footer-social">
-                <ul className="social">
-				    <li>
-                        <a href="https://www.facebook.com/CampGladiator/"  rel="noreferrer">
-
-                        </a>
-                    </li>
-					<li>
-                        <a href="https://twitter.com/campgladiator" target="_blank" rel="noreferrer">
-                            </a>
-                    </li>
-					<li>
-                        <a href="https://www.instagram.com/campgladiator/" target="_blank" rel="noreferrer">
-
-                        </a>
-                    </li>
-					<li>
-                        <a href="https://www.youtube.com/user/CampGladiator" target="_blank" rel="noreferrer">
-
-                        </a>
-                    </li>
-				</ul>
-            </div>
+            <img src={logoFooter} alt="Logo" />
         </footer>
     </div>
 );

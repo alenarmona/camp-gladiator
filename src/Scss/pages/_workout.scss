@@ -5,11 +5,23 @@
     .main-content {
         display: flex;
 
+        @include respond-to('xxsmall') {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 15px;
+        }
+
         .left-content {
             flex: 1 1 80%;
 
             p {
                 margin-bottom: 40px;
+            }
+
+            @include respond-to('xxsmall') {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         }
         .right-content {
@@ -25,6 +37,10 @@
                 height: 150px;
                 object-fit: cover;
                 object-position: center
+            }
+
+            @include respond-to('xxsmall') {
+                width: 100%;
             }
         }
     }

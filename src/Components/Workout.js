@@ -10,6 +10,7 @@ export default class Workout extends Component {
         this.state = { loading: true };
     }
     componentDidMount() {
+        //Simulating real loading
         setTimeout(() => {
            this.setState( { loading: false });
         }, 1000);
@@ -28,16 +29,17 @@ export default class Workout extends Component {
                             height="100%"
                         />
                     )}
-                      <img src={workout.thumbnail} alt={workout.title} style={{ display:  this.state.loading ? 'none' : undefined }}/>
+                    <img src={workout.thumbnail} alt={workout.title} style={{ display:  this.state.loading ? 'none' : undefined }}/>
                 </div>
                 <div className="data-container">
                     <h2>{this.state.loading ? <Skeleton /> : workout.title }</h2>
-                    <WorkoutMeta data={workout} />
+                    <WorkoutMeta data={workout} loading={this.state.loading} />
                     <p>{ this.state.loading ? <Skeleton /> : workout.description }</p>
                     <Link
                         to={`/workouts/${workout.id}`}
                         key={workout.id}
                         className="button"
+                        style={{ display:  this.state.loading ? 'none' : undefined }}
                     >
                         More Info
                     </Link>

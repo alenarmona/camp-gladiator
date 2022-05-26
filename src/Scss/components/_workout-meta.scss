@@ -1,7 +1,6 @@
 ul.workout-meta {
     display: flex;
     margin: 20px 0px;
-    max-width: 300px;
 
     li {
         display: flex;
@@ -11,7 +10,7 @@ ul.workout-meta {
         text-transform: capitalize;
         font-weight: bold;
         border-right: 1px solid lighten($grey, 30%);
-        width: 100px;
+        width: 120px;
 
         img {
             height: 30px;

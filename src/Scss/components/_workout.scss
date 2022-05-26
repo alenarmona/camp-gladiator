@@ -13,6 +13,12 @@
         width: 250px;
         height: 250px;
 
+        @include respond-to('xsmall') {
+            flex: 0 0 200px;
+            width: 200px;
+            height: 200px;
+        }
+
         img {
             object-fit: cover;
             object-position: center;
@@ -24,5 +30,20 @@
 
     .data-container {
         padding: 30px;
+
+        @include respond-to('xsmall') {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    @include respond-to('xsmall') {
+        flex-direction: column;
+
+        &.reverse {
+            flex-direction: column;
+        }
     }
 }
