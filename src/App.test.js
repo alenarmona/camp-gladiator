@@ -6,7 +6,6 @@ import App from './App'
 import '@testing-library/jest-dom/extend-expect'
 
 test('Render workouts page', () => {
-	const history = createMemoryHistory()
 	const { container } = render(
 		<MemoryRouter initialEntries={['/']}>
       <App />
@@ -18,7 +17,6 @@ test('Render workouts page', () => {
 
 
 test('Workouts page have a hero', () => {
-	const history = createMemoryHistory()
 	const { container } = render(
 		<MemoryRouter initialEntries={['/']}>
       <App />
