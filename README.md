@@ -12,6 +12,12 @@ Off course, there are many improvements to apply, but I've tried to find a balan
 I've added a Skeleton skin and simulated an API call (with setTimeout) in the workouts list.
 Also, I've created some basic render tests.
 Please, give me some feedback about the challenge.
+
+## Setup project
+
+1. Clone repo in your machine
+2. In the project director, execute: `npm install`
+
 ## Run project
 
 In the project directory, you can run:
@@ -27,16 +33,9 @@ You may also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 
