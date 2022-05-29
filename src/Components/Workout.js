@@ -1,51 +1,48 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import WorkoutMeta from './WorkoutMeta';
 
-export default class Workout extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { loading: true };
-    }
-    componentDidMount() {
+function Workout(props) {
+    const workout = props.data
+    const [ loading, setLoading ] = useState(true);
+
+    useEffect(() => {
         //Simulating real loading
         setTimeout(() => {
-           this.setState( { loading: false });
+            setLoading(false);
         }, 1000);
-    }
-    render () {
-      const workout = this.props.data
+    })
 
-      return (
+    return (
 
-            <div className={`workout ${this.props.renderMode}`} key={workout.id} id={workout.id}>
-                <div className="img-container">
-                    {
-                        this.state.loading && (
-                        <Skeleton
-                            circle
-                            height="100%"
-                        />
-                    )}
-                    <img src={workout.thumbnail} alt={workout.title} style={{ display:  this.state.loading ? 'none' : undefined }}/>
-                </div>
-                <div className="data-container">
-                    <h2>{this.state.loading ? <Skeleton /> : workout.title }</h2>
-                    <WorkoutMeta data={workout} loading={this.state.loading} />
-                    <p>{ this.state.loading ? <Skeleton /> : workout.description }</p>
-                    <Link
-                        to={`/workouts/${workout.id}`}
-                        key={workout.id}
-                        className="button"
-                        style={{ display:  this.state.loading ? 'none' : undefined }}
-                    >
-                        More Info
-                    </Link>
-                </div>
+        <div className={`workout ${props.renderMode}`} key={workout.id} id={workout.id}>
+            <div className="img-container">
+                {
+                    loading && (
+                    <Skeleton
+                        circle
+                        height="100%"
+                    />
+                )}
+                <img src={workout.thumbnail} alt={workout.title} style={{ display: loading ? 'none' : undefined }}/>
             </div>
-
-      )
-    }
+            <div className="data-container">
+                <h2>{loading ? <Skeleton /> : workout.title }</h2>
+                <WorkoutMeta data={workout} loading={loading} />
+                <p>{ loading ? <Skeleton /> : workout.description }</p>
+                <Link
+                    to={`/workouts/${workout.id}`}
+                    key={workout.id}
+                    className="button"
+                    style={{ display:  loading ? 'none' : undefined }}
+                >
+                    More Info
+                </Link>
+            </div>
+        </div>
+    )
   }
+
+  export default Workout;
